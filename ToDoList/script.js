@@ -21,8 +21,9 @@ let addBtn = document.getElementById('add_btn');
                 let newLi = document.createElement('li');
                 // newLi.classList.add('list-group-item');
                 newLi.className="list-group-item d-flex justify-content-between"
-                newLi.innerHTML = `<h6 class="flex-grow-1">${currentinput}</h6>
-                                <button id ="add_btn" class="btn btn-outline-light bg-warning"  type="button" id="button-add onclick="editTask(this)">Edit</button>
+                newLi.innerHTML = `<input class="form-check-input me-3" type="checkbox" value="" id="flexCheckDefault">
+                                <h6 class="flex-grow-1">${currentinput}</h6>
+                                <button id ="add_btn" class="btn btn-outline-light bg-warning"  type="button" id="button-add" onclick="editTask(this)">Edit</button>
                                 <button id ="add_btn" class="btn btn-outline-light bg-danger"  type="button" id="button-add" onclick="removeTask(this)">Remove</button>`;
 
                 ulTag.appendChild(newLi);
@@ -65,3 +66,4 @@ let addBtn = document.getElementById('add_btn');
         }
 
     }
+    
