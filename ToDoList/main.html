@@ -10,12 +10,34 @@
         *{
             margin: 0;
         }
+        html{
+            font-size: 70%;
+        }
         #heading{
             background-color: rgb(12, 33, 80);
             color: wheat;
-            font-size: 3em;
+            font-size: 4rem;
             padding: 10px 10px;
             text-align: center;
+        }
+        h2{
+            font-size: 2rem;
+        }
+        #add_btn, #listofTask, .form-control, h6{
+            font-size: 1.3rem;
+        }
+
+        @media (max-width: 700px) {
+            html{font-size: 63%;}
+        }
+        @media (max-width: 600px) {
+            html{font-size: 55%;}
+        }
+        @media (max-width: 500px) {
+            html{font-size: 50%;}
+        }
+        @media (max-width: 400px) {
+            html{font-size: 43%;}
         }
     </style>
 </head>
@@ -26,6 +48,7 @@
 
     <div class="container mt-5 col-6 ">
         <h2>Add Task</h2>
+        <br>
         <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Enter" aria-label="Recipient's username" aria-describedby="button-addon2">
             <button id ="add_btn" class="btn btn-outline-light bg-success"  type="button" id="button-add">Add</button>
