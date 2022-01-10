@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNNiAxNGg2di02YzMuMzA5IDAgNiAyLjY5MSA2IDZzLTIuNjkxIDYtNiA2LTYtMi42OTEtNi02em0xNiAwYzAgNS41MjMtNC40NzggMTAtMTAgMTBzLTEwLTQuNDc3LTEwLTEwIDQuNDc4LTEwIDEwLTEwIDEwIDQuNDc3IDEwIDEwem0tMiAwYzAtNC40MTEtMy41ODktOC04LThzLTggMy41ODktOCA4IDMuNTg5IDggOCA4IDgtMy41ODkgOC04em0tNi0xMS44MTl2LTIuMTgxaC00djIuMTgxYzEuNDA4LS4yMzggMi41NjItLjI0MyA0IDB6bTYuNjc5IDMuNTU0bDEuMzIxLTEuMzIxLTEuNDE0LTEuNDE0LTEuNDA3IDEuNDA3Yy41MzYuNDAyIDEuMDM4Ljg0NCAxLjUgMS4zMjh6Ii8+PC9zdmc+" type="image/x-icon">
+    <title>StopWatch</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: black;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .display{
+            background: linear-gradient(135deg, #1af0b3, #10fc08,#eefa0c, #fcb721, #f005b5);
+            height: 80px;
+            width: 300px;
+            padding: 7px;
+            margin: 40px;
+            border-radius: 5px;
+            animation: animate 1.5s linear infinite;
+        }
+        #stopwatch{
+            background-color: black;
+            height:66px;
+            width: 286px;
+            text-align: center;
+            line-height: 66px;
+            font-size: 50px;
+            border-radius: 5px;
+            background: linear-gradient(135deg, #1af0b3, #10fc08,#eefa0c, #fcb721, #f005b5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: animate 1.5s linear infinite;
+        }
+        #buttons{
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
+        button{
+            border: none;
+            outline: none;
+            padding: .5rem 1rem;
+            margin: 0 3vw;
+            border-radius: 5px;
+            font-weight: 700;
+            background-color: rgb(221, 218, 214);
+        }
+        @keyframes animate {
+            100%{
+                filter: hue-rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="display">
+            <div style="background-color: black;">
+                <div id="stopwatch">
+                    00:00:00
+                </div>
+            </div>
+        </div>
+    
+        <ul id="buttons">
+            <li><button onclick="start()">Start</button></li>
+            <li><button onclick="stop()">Stop</button></li>
+            <li><button onclick="reset()">Reset</button></li>
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
