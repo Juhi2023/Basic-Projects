@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#swap{
+    cursor: pointer;
+}
+
+.image{
+    padding: 5px;
+    width: 50px;
+    height: 38px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.contain{
+    background: linear-gradient(110deg, #fdcd3b, #ecfc15 );
+    border-radius: 20px;
+    padding: 20px 0;
+}
+
+.container{
+    max-width: 700px !important;
+}
+
+.container input, .container .form-select {
+    min-width: 200px;  
+    max-width: 200px;
+}
